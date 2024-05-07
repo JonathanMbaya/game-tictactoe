@@ -9,14 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
 </head>
 <body>
 
+    <nav>
+        <ul>
+            <a href="">
+                <li>Score</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div id="resultDiv" style="display: none;"></div>
+
+
     <h1>Tic Tac Toe</h1>
 
-    <canvas id="canvas" width="300" height="300"></canvas>
+    <canvas class="animate__animated animate__bounce" id="canvas" width="300" height="300"></canvas>
 
     <button onclick="startGame()">Lancer le jeu</button>
 

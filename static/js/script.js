@@ -20,6 +20,13 @@ function startGame() {
         ctx.stroke();
     }
 
+    // Afficher le résultat de la partie dans la div
+    function showResult(message) {
+        var resultDiv = document.getElementById("resultDiv");
+        resultDiv.innerHTML = message;
+        resultDiv.style.display = "block";
+    }
+
     // Gérer les clics sur le canvas
     canvas.addEventListener("click", function(event) {
         if (gameOver) return;
@@ -32,20 +39,13 @@ function startGame() {
             board[row][col] = currentPlayer;
             drawSymbol(row, col, currentPlayer);
             if (checkWinner()) {
-                alert("Le joueur " + currentPlayer + " a gagné!");
-                location.reload();
+                showResult("Le joueur " + currentPlayer + " a gagné!");
                 gameOver = true;
             } else if (checkTie()) {
-                alert("C'est un égalité");
+                showResult("C'est un égalité");
                 gameOver = true;
             } else {
                 currentPlayer = currentPlayer === "X" ? "O" : "X";
-            }
-            if (gameOver) {
-                setTimeout(function() {
-                    alert('Rechargement d\'une nouvelle partie');
-                    location.reload();
-                }, 1000); // Rafraîchir la page après 1 seconde
             }
         }
     });

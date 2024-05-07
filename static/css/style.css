@@ -5,6 +5,30 @@ body , h1 , h2 , h3 , button {
     font-style: normal;
 }
 
+nav{
+    position: absolute;
+    top: 5px;
+    right: 2rem;
+}
+
+nav ul li {
+
+    list-style-type: none !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: white;
+}
+
+#resultDiv{
+    padding: .5rem .4rem;
+    background-color: white;
+    color: green;
+    font-size: 20px;
+    border-radius: 5rem;
+}
+
 body{
     position: fixed;
     background-color: lightgreen;
