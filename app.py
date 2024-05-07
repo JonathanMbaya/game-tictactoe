@@ -7,6 +7,10 @@ app = Flask(__name__, static_folder='static')
 def index():
     return render_template('index.html')
 
+@app.route('/score')
+def score():
+    return render_template('score.html')
+
 @app.route('/play')
 def play():
     game = TicTacToe()  # Instancier la classe TicTacToe
