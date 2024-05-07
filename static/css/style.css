@@ -1,11 +1,14 @@
-body{
+body , h1 , h2 , h3 , button {
     font-family: "Jaro", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+body{
     position: fixed;
     /* background-color: beige; */
-    background-image: url('../image-jeu.jpg');
+    background-image: url('https://images.unsplash.com/photo-1544914379-806667cd9489?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
     background-size:cover;
     backdrop-filter: blur(10px);
@@ -41,7 +44,7 @@ button {
 
 
 button:hover {
-    padding: 1.2rem;
+    padding: 1rem;
     border: none;
     background-color: white;
     border-radius: .5rem;
